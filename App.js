@@ -8,8 +8,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>{outputText}</Text>
-      <Button title="Click" onPress={() => setOutputText('The text clicked') }></Button>
+      <Text style={styles.text}>{outputText}</Text>
+      <Button style={styles.btn} title="Click" onPress={() => setOutputText('The text clicked') }></Button>
     </View>
   );
 }
@@ -17,12 +17,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#eaed28',
+    backgroundColor: '#240b36',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#eaed28'
+    color: '#e627b3'
   },
-  Text: {
-    color: '#27dfe6'
+  text: {
+    color: '#e627b3'
   },
+  btn: {
+    color: '#e627b3'
+  }
 });
