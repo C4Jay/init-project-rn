@@ -1,10 +1,15 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
+
+  const [outputText, setOutputText] = useState('unClicked')
+
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>{outputText}</Text>
+      <Button title="Click" onPress={() => setOutputText('The text clicked') }></Button>
     </View>
   );
 }
@@ -12,8 +17,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#eaed28',
     alignItems: 'center',
     justifyContent: 'center',
+    color: '#eaed28'
+  },
+  Text: {
+    color: '#27dfe6'
   },
 });
